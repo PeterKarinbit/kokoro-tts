@@ -21,7 +21,7 @@ from pydantic import BaseModel, Field
 # ─── Configuration ────────────────────────────────────────────────────────────
 
 MODEL_DIR = Path(os.environ.get("MODEL_DIR", "models"))
-MODEL_PATH = MODEL_DIR / "kokoro-v1.0.onnx"
+MODEL_PATH = MODEL_DIR / "kokoro-v1.0.int8.onnx"
 VOICES_PATH = MODEL_DIR / "voices-v1.0.bin"
 
 DEFAULT_VOICE = "af_heart"  # Ivo's voice — American Female, warm/heart style
