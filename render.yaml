@@ -8,4 +8,4 @@ services:
         value: /app/models
       - key: PORT
         value: 8080
-    healthCheckPath: /health
+    healthCheckPath: /
