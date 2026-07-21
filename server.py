@@ -149,6 +149,12 @@ class HealthResponse(BaseModel):
 
 # ─── Routes ───────────────────────────────────────────────────────────────────
 
+@app.get("/")
+def root():
+    """Root route — always responds instantly (for Render health checks)."""
+    return {"status": "ok", "service": "kokoro-tts", "message": "Ivo's voice engine is running"}
+
+
 @app.get("/health", response_model=HealthResponse)
 def health():
     return HealthResponse(
